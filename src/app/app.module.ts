@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AdminComponentComponent } from './components/admin-component/admin-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenubarModule } from 'primeng/menubar';
+import { NgxLoadingModule } from 'ngx-loading';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MenubarModule } from 'primeng/menubar';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MenubarModule
+    MenubarModule,
+    NgxLoadingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
