@@ -8,6 +8,7 @@ import { AdminComponentComponent } from './components/admin-component/admin-comp
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenubarModule } from 'primeng/menubar';
 import { NgxLoadingModule } from 'ngx-loading';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NgxLoadingModule } from 'ngx-loading';
     AppRoutingModule,
     BrowserAnimationsModule,
     MenubarModule,
-    NgxLoadingModule
+    NgxLoadingModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
