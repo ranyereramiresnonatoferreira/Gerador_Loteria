@@ -13,14 +13,14 @@ export class LotteriesResultService {
   constructor(private http: HttpClient) { }
 
   getLatestResultForTypeLotterie(type:string){
-    return this.http.get<LoteriaData>(`${apiUrl}/Api/${type}/latest`)
+    return this.http.get<LoteriaData>(`${apiUrl}/${type}/latest`)
     .pipe(
       retry(0)
     );
   }
 
   getEspecifiedResultForTypeLotterie(type:string, contest:number){
-    return this.http.get<LoteriaData>(`${apiUrl}/Api/${type}/${contest}`)
+    return this.http.get<LoteriaData>(`${apiUrl}/${type}/${contest}`)
     .pipe(
       retry(0)
     );

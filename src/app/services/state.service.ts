@@ -13,6 +13,8 @@ export class StateService {
   constructor() { }
 
   setIsLoading(value: boolean) {
-    this._isLoading.next(value);
+    setTimeout(() => {
+      this._isLoading.next(value);
+    });
   }
 }

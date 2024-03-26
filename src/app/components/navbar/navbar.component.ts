@@ -18,7 +18,7 @@ export class NavbarComponent {
           routerLink: '/lotteries/generate-numbers'
       },
       {
-        label: 'Ver Resultados',
+        label: 'Ver Último Resultados',
         icon: 'pi pi-fw pi-power-off',
         routerLink: '/lotteries/view-result'
     }

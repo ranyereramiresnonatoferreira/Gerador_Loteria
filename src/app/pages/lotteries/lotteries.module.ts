@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { LotteriesRoutingModule } from './lotteries-routing.module';
 import { GenerateNumbersComponent } from './generate-numbers/generate-numbers.component';
 import { ViewResultComponent } from './view-result/view-result.component';
+import { TableModule } from 'primeng/table';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +15,10 @@ import { ViewResultComponent } from './view-result/view-result.component';
   ],
   imports: [
     CommonModule,
-    LotteriesRoutingModule
+    LotteriesRoutingModule,
+    TableModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class LotteriesModule { }

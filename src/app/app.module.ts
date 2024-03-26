@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenubarModule } from 'primeng/menubar';
 import { NgxLoadingModule } from 'ngx-loading';
 import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,12 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     MenubarModule,
     NgxLoadingModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    HttpClientModule,
+    TableModule
   ],
   providers: [],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
