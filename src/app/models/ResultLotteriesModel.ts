@@ -1,11 +1,11 @@
-interface Premiacao {
+export interface Premiacao {
     descricao: string;
     faixa: number;
     ganhadores: number;
     valorPremio: number;
   }
   
-  interface LocalGanhador {
+  export interface LocalGanhador {
     ganhadores: number;
     municipio: string;
     nomeFatansiaUL: string;
@@ -14,7 +14,7 @@ interface Premiacao {
     uf: string;
   }
   
-  interface LoteriaData {
+  export interface LoteriaData {
     loteria: string;
     concurso: number;
     data: string;

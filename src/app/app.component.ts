@@ -13,6 +13,6 @@ export class AppComponent {
   isLoading$: Observable<boolean>;
 
   constructor(private stateService:StateService, private localStorageService:LocalStorageService){
-    this.isLoading$ = this.stateService.geLoading$;
+    this.isLoading$ = this.stateService.getLoading$;
   }
 }

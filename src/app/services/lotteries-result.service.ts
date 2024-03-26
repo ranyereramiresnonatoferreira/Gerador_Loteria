@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { retry } from 'rxjs';
+import { LoteriaData } from '../models/ResultLotteriesModel';
 
 const apiUrl = 'https://loteriascaixa-api.herokuapp.com/api'
 
