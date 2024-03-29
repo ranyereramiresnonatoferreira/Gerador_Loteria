@@ -11,6 +11,7 @@ import { NgxLoadingModule } from 'ngx-loading';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { TableModule } from 'primeng/table';
+import { PipeModule } from './pipes/pipe/pipe.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TableModule } from 'primeng/table';
     NgxLoadingModule,
     ToastrModule.forRoot(),
     HttpClientModule,
-    TableModule
+    TableModule,
+    PipeModule
   ],
   providers: [],
   

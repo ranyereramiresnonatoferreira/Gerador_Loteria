@@ -7,6 +7,7 @@ import { ViewResultComponent } from './view-result/view-result.component';
 import { TableModule } from 'primeng/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
+import { PipeModule } from '../../pipes/pipe/pipe.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ButtonModule } from 'primeng/button';
     TableModule,
     FormsModule,
     ReactiveFormsModule,
-    ButtonModule
+    ButtonModule,
+    PipeModule
   ]
 })
 export class LotteriesModule { }
