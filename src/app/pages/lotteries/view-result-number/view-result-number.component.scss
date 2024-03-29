@@ -1,0 +1,30 @@
+.container{
+    padding-top: 1%;
+}
+
+.button-div{
+    margin-left: 1%;
+    margin-top: 2%;
+}
+
+.circle {
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #0f0;
+    color: white;
+    text-align: center;
+    margin-right: 10px;
+    font-size: 16px; 
+  }
+  
+  .green {
+    background-color: #209869; 
+  }
+
+  .div-lotterie{
+    margin-top: 1%;
+}

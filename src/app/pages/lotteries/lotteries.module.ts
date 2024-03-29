@@ -8,12 +8,14 @@ import { TableModule } from 'primeng/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { PipeModule } from '../../pipes/pipe/pipe.module';
+import { ViewResultNumberComponent } from './view-result-number/view-result-number.component';
 
 
 @NgModule({
   declarations: [
     GenerateNumbersComponent,
-    ViewResultComponent
+    ViewResultComponent,
+    ViewResultNumberComponent
   ],
   imports: [
     CommonModule,

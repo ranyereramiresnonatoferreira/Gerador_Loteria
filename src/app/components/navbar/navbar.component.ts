@@ -21,7 +21,12 @@ export class NavbarComponent {
         label: 'Ver Último Resultados',
         icon: 'pi pi-fw pi-power-off',
         routerLink: '/lotteries/view-result'
-    }
+      },
+      {
+        label: 'Ver Resultados Antigos',
+        icon: 'pi pi-fw pi-power-off',
+        routerLink: '/lotteries/view-result-number'
+      }
   ]
   
   }

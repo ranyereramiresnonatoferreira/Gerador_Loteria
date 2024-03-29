@@ -1,0 +1,122 @@
+<div class="container">
+    <form [formGroup]="formSearchResult">
+        <div class="row">
+            <div class="col-sm">
+                <div class="col-sm">
+                    <label for="lotterie">Selecione a Loteria</label>
+                    <select class="form-control" id="lotterie" formControlName="lotterie">
+                        <option *ngFor="let lotterie of lotteries" [value]="lotterie">{{ lotterie | nameLotterie }}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm">
+                <label for="contest">Número concurso</label>
+                <input type="number" class="form-control" id="contest" formControlName="contest">
+            </div>
+            <div class="col-sm button-div">
+                <p-button label="Buscar resultado" (onClick)="getResult()"></p-button>
+            </div>
+            <div class="col-sm">
+
+            </div>
+        </div>
+    </form>
+    <div [hidden]="hiddenResult">
+        <form [formGroup]="formResultLotterie">
+        <div class="row div-lotterie" [hidden]="hiddenTeam">
+            <div class="col-md-3">
+                <label for="timeDoCoracao">Time do Coração</label>
+                <input type="text" class="form-control" id="concurso" readonly formControlName="timeDoCoracao">
+            </div>
+        </div>
+        <div class="row div-lotterie" [hidden]="hiddenMonth">
+            <div class="col-md-3">
+                <label for="mesDaSorte">Mês da Sorte</label>
+                <input type="text" class="form-control" id="concurso" readonly formControlName="mesDaSorte">
+            </div>
+        </div>
+        <div class="row div-lotterie">
+            <div class="col-sm">
+                <h3>Números</h3>
+                <ng-container *ngFor="let numbers of resultLotterie?.dezenas; let i = index">
+                    <div class="circle green">{{ numbers }}</div>
+                  </ng-container>
+              </div>
+        </div>
+        <div class="row div-lotterie" [hidden]="hiddenshamrocks">
+            <div class="col-sm">
+                <h3>Trevos</h3>
+                <ng-container *ngFor="let shamrocks of resultLotterie?.trevos; let i = index">
+                    <div class="circle green">{{ shamrocks }}</div>
+                  </ng-container>
+              </div>
+        </div>
+        <div class="row div-lotterie">
+            <div class="col-sm">
+                <label for="loteria">Loteria</label>
+                <input type="text" class="form-control" id="loteria" readonly formControlName="loteria">
+            </div>
+            <div class="col-sm">
+                <label for="concurso">Concurso</label>
+                <input type="text" class="form-control" id="concurso" readonly formControlName="concurso">
+            </div>
+            <div class="col-sm">
+                <label for="data">Data</label>
+                <input type="text" class="form-control" id="data" readonly formControlName="data">
+            </div>
+            <div class="col-sm">
+                <label for="local">Local</label>
+                <input type="text" class="form-control" id="local" readonly formControlName="local">
+            </div>
+        </div>
+        <!-- <div class="row div-lotterie">
+            <div class="col-sm">
+                <label for="acumulou">Acumulou</label>
+                <input type="text" class="form-control" id="acumulou" readonly formControlName="acumulou">
+            </div>
+            <div class="col-sm">
+                <label for="proximoConcurso">Próximo Concurso</label>
+                <input type="text" class="form-control" id="proximoConcurso" readonly formControlName="proximoConcurso">
+            </div>
+            <div class="col-sm">
+                <label for="dataProximoConcurso">Data Próximo Concurso</label>
+                <input type="text" class="form-control" id="dataProximoConcurso" readonly formControlName="dataProximoConcurso">
+            </div>
+            <div class="col-sm">
+                <label for="valorArrecadado">Valor Arrecadado</label>
+                <input type="text" class="form-control" id="valorArrecadado" readonly formControlName="valorArrecadado">
+            </div>
+        </div> -->
+        <!-- <div class="row div-lotterie">
+            <div class="col-sm">
+                <label for="valorAcumuladoProximoConcurso">Valor Acumulado Próximo Concurso</label>
+                <input type="text" class="form-control" id="valorAcumuladoProximoConcurso" readonly formControlName="valorAcumuladoProximoConcurso">
+            </div>
+            <div class="col-sm">
+                <label for="valorEstimadoProximoConcurso">Valor Estimado Próximo Concurso</label>
+                <input type="text" class="form-control" id="valorEstimadoProximoConcurso" readonly formControlName="valorEstimadoProximoConcurso">
+            </div>
+        </div> -->
+        <br>
+        <h3>Ganhadores</h3>
+        <div class="row div-lotterie">
+            <p-table [value]="awards" [tableStyle]="{ 'min-width': '50rem' }">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Ganhadores</th>
+                        <th>Valor Prêmio</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-award>
+                    <tr>
+                        <td>{{ award.descricao }}</td>
+                        <td>{{ formatNumber(award.ganhadores)}}</td>
+                        <td>{{ transformCurrency(award.valorPremio)}}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </form>
+    </div>
+</div>
