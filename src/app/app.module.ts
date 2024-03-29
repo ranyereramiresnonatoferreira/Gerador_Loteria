@@ -27,7 +27,9 @@ import { AdsenseModule } from 'ng2-adsense';
     BrowserAnimationsModule,
     MenubarModule,
     NgxLoadingModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right'
+    }),
     HttpClientModule,
     TableModule,
     PipeModule,

@@ -9,18 +9,18 @@ export class ShowToastrService {
   constructor(private toastr: ToastrService) { }
 
   showSuccess(title: string) {
-    this.toastr.success('Sucesso', title);
+    this.toastr.success(title, 'Sucesso');
   }
 
   showError(title: string) {
-    this.toastr.error('Erro', title);
+    this.toastr.error(title, 'Erro');
   }
 
   showWarning(title: string) {
-    this.toastr.warning('Atenção', title);
+    this.toastr.warning(title, 'Atenção');
   }
 
   showInfo(title: string) {
-    this.toastr.info('Informação', title);
+    this.toastr.info(title, 'Informação');
   }
 }
