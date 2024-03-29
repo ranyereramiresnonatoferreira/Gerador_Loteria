@@ -95,7 +95,7 @@ export class ViewResultComponent implements OnInit{
         this.formResultLotterie.get('concurso').setValue(this.resultLotterie.concurso);
         this.formResultLotterie.get('data').setValue(this.resultLotterie.data);
         this.formResultLotterie.get('local').setValue(this.resultLotterie.local);
-        this.formResultLotterie.get('acumulou').setValue(this.resultLotterie.acumulou);
+        this.formResultLotterie.get('acumulou').setValue(this.resultLotterie.acumulou == true ? "Sim" : "Não");
         this.formResultLotterie.get('proximoConcurso').setValue(this.resultLotterie.proximoConcurso);
         this.formResultLotterie.get('dataProximoConcurso').setValue(this.resultLotterie.dataProximoConcurso);
         this.formResultLotterie.get('valorArrecadado').setValue(this.transformCurrency(this.resultLotterie.valorArrecadado));
