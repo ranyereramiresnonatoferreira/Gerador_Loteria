@@ -9,7 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { PipeModule } from '../../pipes/pipe/pipe.module';
 import { ViewResultNumberComponent } from './view-result-number/view-result-number.component';
-
+import { AdsenseModule } from 'ng2-adsense';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { ViewResultNumberComponent } from './view-result-number/view-result-numb
     FormsModule,
     ReactiveFormsModule,
     ButtonModule,
-    PipeModule
+    PipeModule,
+    AdsenseModule
   ]
 })
 export class LotteriesModule { }

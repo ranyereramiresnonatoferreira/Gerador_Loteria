@@ -12,6 +12,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { TableModule } from 'primeng/table';
 import { PipeModule } from './pipes/pipe/pipe.module';
+import { AdsenseModule } from 'ng2-adsense';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { PipeModule } from './pipes/pipe/pipe.module';
     ToastrModule.forRoot(),
     HttpClientModule,
     TableModule,
-    PipeModule
+    PipeModule,
+    AdsenseModule.forRoot()
   ],
   providers: [],
   
