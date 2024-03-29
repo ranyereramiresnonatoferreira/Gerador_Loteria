@@ -1,83 +1,201 @@
-export const LotteriesDetail = {
-    maismilionaria : {
+export const LotteriesDetail = [
+    {
+        nome:"maismilionaria",
         minimoNumeros:6,
         maximoNumeros:12,
         menorNumero:1,
         maiorNumero:50,
         geraMes:false,
         geraTime:false,
+        geraTrevo:true,
         regraMultipla:1
     },
-    megasena : {
+    {
+        nome:"megasena",
         minimoNumeros:6,
         maximoNumeros:15,
         menorNumero:1,
         maiorNumero:60,
         geraMes:false,
         geraTime:false,
+        geraTrevo:false,
         regraMultipla:1
     },
-    lotofacil : {
+    {
+        nome:"lotofacil",
         minimoNumeros:5,
         maximoNumeros:15,
         menorNumero:1,
         maiorNumero:25,
         geraMes:false,
         geraTime:false,
+        geraTrevo:false,
         regraMultipla:1
     },
-    quina : {
+    {
+        nome:"quina",
         minimoNumeros:5,
         maximoNumeros:15,
         menorNumero:1,
         maiorNumero:80,
         geraMes:false,
         geraTime:false,
+        geraTrevo:false,
         regraMultipla:1
     },
-    lotomania : {
+    {
+        nome:"lotomania",
         minimoNumeros:0,
         maximoNumeros:99,
         menorNumero:1,
         maiorNumero:100,
         geraMes:false,
         geraTime:false,
+        geraTrevo:false,
         regraMultipla:1
     },
-    timemania : {
+    {
+        nome:"timemania",
         minimoNumeros:10,
         maximoNumeros:10,
         menorNumero:1,
         maiorNumero:80,
         geraMes:false,
         geraTime:true,
+        geraTrevo:false,
         regraMultipla:1
     },
-    duplasena : {
+    {
+        nome:"duplasena",
         minimoNumeros:6,
         maximoNumeros:15,
         menorNumero:1,
         maiorNumero:50,
         geraMes:false,
         geraTime:true,
+        geraTrevo:false,
         regraMultipla:1
     },
-    diadesorte : {
+    {
+        nome:"diadesorte",
         minimoNumeros:7,
         maximoNumeros:15,
         menorNumero:1,
         maiorNumero:31,
         geraMes:true,
         geraTime:false,
+        geraTrevo:false,
         regraMultipla:1
     },
-    supersete : {
+    {
+        nome:"supersete",
         minimoNumeros:1,
         maximoNumeros:1,
         menorNumero:1,
         maiorNumero:9,
         geraMes:true,
         geraTime:true,
+        geraTrevo:false,
         regraMultipla:7
     }
-}
+]
+
+
+
+export const mesesDoAno = [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro"
+  ];
+
+ export const clubes = [
+    "FLAMENGO - RJ",
+    "CORINTHIANS - SP",
+    "PALMEIRAS - SP",
+    "SANTOS - SP",
+    "SAO PAULO - SP",
+    "CRUZEIRO - MG",
+    "VASCO DA GAMA - RJ",
+    "GREMIO - RS",
+    "ATLETICO - MG",
+    "BOTAFOGO - RJ",
+    "FLUMINENSE - RJ",
+    "BAHIA - BA",
+    "INTERNACIONAL - RS",
+    "GOIAS - GO",
+    "VITORIA - BA",
+    "ATHLETICO - PR",
+    "ABC - RN",
+    "FORTALEZA - CE",
+    "AMERICA - MG",
+    "CORITIBA - PR",
+    "CUIABA - MT",
+    "ATLETICO - GO",
+    "AVAI - SC",
+    "REMO - PA",
+    "SANTA CRUZ - PE",
+    "CEARA - CE",
+    "SPORT - PE",
+    "TREZE - PB",
+    "CRICIUMA - SC",
+    "CRB - AL",
+    "AMERICA - RN",
+    "CSA - AL",
+    "NAUTICO - PE",
+    "VILA NOVA - GO",
+    "FIGUEIRENSE - SC",
+    "APARECIDENSE - GO",
+    "PAYSANDU - PA",
+    "FERROVIARIA - SP",
+    "BRAGANTINO - SP",
+    "PARANA - PR",
+    "MIRASSOL - SP",
+    "SAMP CORREA - MA",
+    "PONTE PRETA - SP",
+    "ALTOS - PI",
+    "CONFIANCA - SE",
+    "LONDRINA - PR",
+    "GUARANI - SP",
+    "FLORESTA - CE",
+    "BOTAFOGO - PB",
+    "MOTO CLUB - MA",
+    "FERROVIARIO - CE",
+    "BOAVISTA - RJ",
+    "JUVENTUDE - RS",
+    "SAO BENTO - SP",
+    "CAXIAS - RS",
+    "ITUANO - SP",
+    "ATLETICO - CE",
+    "BOA ESPORTE - MG",
+    "SAO JOSE - RS",
+    "ATLETICO - AC",
+    "BRASILIENSE - DF",
+    "JOINVILLE - SC",
+    "CHAPECOENSE - SC",
+    "BOTAFOGO - SP",
+    "NOVORIZONTINO - SP",
+    "OPERARIO - PR",
+    "YPIRANGA - RS",
+    "OESTE - SP",
+    "BRASIL DE PELOTAS - RS",
+    "BRUSQUE - SC",
+    "MANAUS - AM",
+    "IMPERATRIZ - MA",
+    "CAMPINENSE - PB",
+    "SAORAIMUNDO - RR",
+    "CIANORTE - PR",
+    "JACUIPENSE - BA",
+    "JUAZEIRENSE - BA",
+    "TOMBENSE - MG",
+    "VOLTA REDONDA - RJ",
+    "LUVERDENSE - MT"
+  ];

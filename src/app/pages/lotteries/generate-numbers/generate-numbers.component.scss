@@ -1,3 +1,38 @@
 .container{
     margin-top: 1%;
 }
+
+.div-button{
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.circle {
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #0f0;
+    color: white;
+    text-align: center;
+    margin-right: 10px;
+    font-size: 16px; 
+  }
+  
+  .green {
+    background-color: #209869; 
+  }
+
+  h2 {
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #333;
+    background-color: #ffc107; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    text-align: center; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0; 
+}
