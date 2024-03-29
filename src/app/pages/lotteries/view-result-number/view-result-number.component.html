@@ -36,11 +36,22 @@
             </div>
         </div>
         <div class="row div-lotterie">
-            <div class="col-sm">
+            <div class="col-sm" [hidden]="!hiddenDuplaSena">
                 <h3>Números</h3>
                 <ng-container *ngFor="let numbers of resultLotterie?.dezenas; let i = index">
                     <div class="circle green">{{ numbers }}</div>
                   </ng-container>
+              </div>
+              
+              <div class="col-sm" [hidden]="hiddenDuplaSena">
+                <h3>Primeiro Sorteio</h3>
+                <ng-container *ngFor="let numbers of numbersDuplaSena1; let i = index">
+                    <div class="circle green">{{ numbers }}</div>
+                  </ng-container>
+                  <h3>Segundo Sorteio</h3>
+                  <ng-container *ngFor="let numbers of numbersDuplaSena2; let i = index">
+                      <div class="circle green">{{ numbers }}</div>
+                    </ng-container>
               </div>
         </div>
         <div class="row div-lotterie" [hidden]="hiddenshamrocks">

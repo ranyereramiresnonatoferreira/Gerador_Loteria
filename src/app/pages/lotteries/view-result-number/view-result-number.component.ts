@@ -20,6 +20,9 @@ export class ViewResultNumberComponent implements OnInit{
   awards:Premiacao[] = [];
   formResultLotterie:FormGroup;
   formSearchResult:FormGroup;
+  hiddenDuplaSena:boolean = true;
+  numbersDuplaSena1:string[];
+  numbersDuplaSena2:string[];
 
   constructor(private stateService:StateService,
     private lotteriesResulService:LotteriesResultService,
@@ -112,6 +115,14 @@ getResult(){
       this.formResultLotterie.get('timeDoCoracao').setValue(this.resultLotterie.timeCoracao);
       this.formResultLotterie.get('mesDaSorte').setValue(this.resultLotterie.mesSorte);
       this.hiddenResult = false;
+      if(lotterie == 'duplasena'){
+        this.hiddenDuplaSena = false;
+        this.numbersDuplaSena1 = this.resultLotterie.dezenas.slice(0, 6)
+        this.numbersDuplaSena2 = this.resultLotterie.dezenas.slice(6, 12)
+      }
+      else{
+        this.hiddenDuplaSena = true;
+      }
       this.stateService.setIsLoading(false);
     },
     error: (e) => {
