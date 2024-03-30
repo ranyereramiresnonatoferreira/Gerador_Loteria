@@ -2,15 +2,13 @@
     <form [formGroup]="formSearchResult">
         <div class="row">
             <div class="col-sm">
-                <div class="col-sm">
-                    <label for="lotterie">Selecione a Loteria</label>
+                    <label for="lotterie">Loteria</label>
                     <select class="form-control" id="lotterie" formControlName="lotterie">
                         <option *ngFor="let lotterie of lotteries" [value]="lotterie">{{ lotterie | nameLotterie }}</option>
                     </select>
-                </div>
             </div>
             <div class="col-sm">
-                <label for="contest">Número concurso</label>
+                <label for="contest">Número Concurso</label>
                 <input type="number" class="form-control" id="contest" formControlName="contest">
             </div>
             <div class="col-sm button-div">
