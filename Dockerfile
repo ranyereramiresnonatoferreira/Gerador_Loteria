@@ -1,14 +1,14 @@
-FROM node:latest as angular
+FROM node:latest as builder
 WORKDIR /app
 COPY package.json /app
 RUN npm install --silent
-COPY . . 
-run npm run build
+COPY . .
+RUN npm run build
 
 FROM nginx:alpine
 VOLUME /var/cache/nginx
-COPY --from=angular app/dist/GERADOR_LOTERIA /usr/share/nginx/html
+COPY --from=builder /app/dist/GERADOR_LOTERIA /usr/share/nginx/html
 COPY ./config/nginx.conf /etc/nginx/conf.d/default.conf
 
-# docker build -t gerador-loteria
-# docker run -p 8081:80 gerador-loteria
+EXPOSE 8081
+CMD ["nginx", "-g", "daemon off;"]
